@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'myprojects.urls'
@@ -124,3 +125,4 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'students/static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 LOGIN_URL = '/accounts/login'
+STATICFILE_STORAGE = "whitenoise.storage.CompressedManifest StaticFilesStorage"
